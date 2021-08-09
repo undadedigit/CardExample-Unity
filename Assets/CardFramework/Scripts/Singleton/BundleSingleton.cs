@@ -38,7 +38,7 @@ public class BundleSingleton : Singleton<BundleSingleton>
 		AssetBundle assetBundle = GetBundle(name);
 		if (assetBundle == null)
 		{
-			assetBundle = new AssetBundle();
+			//assetBundle = new AssetBundle();
 			assetBundle = AssetBundle.LoadFromFile(path);
 			assetBundle.name = name;
 			AssetBundleList.Add(assetBundle);
@@ -67,6 +67,7 @@ public class BundleSingleton : Singleton<BundleSingleton>
 		if (_currentLevelAssetBundle != null && Application.CanStreamedLevelBeLoaded(level))
 		{
 			BundleSingleton.Instance.UnloadAllBundles();
+		
 			Application.LoadLevel(level);	
 		}
 		else

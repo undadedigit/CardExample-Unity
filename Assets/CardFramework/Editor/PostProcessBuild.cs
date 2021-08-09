@@ -21,7 +21,7 @@ public class PostProcessBuild
 		{
 			DirectoryCopy(DirectoryUtility.ExternalAssets(), pathToBuiltProject + "/Data/ExternalAssets", true);
 		}
-		else if (target == BuildTarget.StandaloneOSXIntel || target == BuildTarget.StandaloneOSXIntel64 || target == BuildTarget.StandaloneOSXUniversal)
+		else if (target == BuildTarget.StandaloneOSXIntel || target == BuildTarget.StandaloneOSXIntel64 || target == BuildTarget.StandaloneOSX)
 		{
 			DirectoryCopy(DirectoryUtility.ExternalAssets(), pathToBuiltProject + "/Contents/ExternalAssets", true);
 		}	
